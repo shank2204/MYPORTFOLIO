@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shankari A - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, .hero-title {
+      font-family: 'Playfair Display', serif;
+    }
+    .vintage-bg {
+      background-color: #F4E1D2;
+    }
+    .accent-color {
+      color: #E76F51;
+    }
+    .retro-border {
+      border: 2px solid #2B3A2F;
+      border-radius: 1rem;
+    }
+    @keyframes pulseSlow {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+    }
+    .animate-pulse-slow {
+      animation: pulseSlow 2s infinite;
+    }
+    /* NEW: Floating Animation for background */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+  
+    /* NEW: Modal open/close smooth */
+    .modal-open {
+      animation: modalOpen 0.5s ease forwards;
+    }
+    .modal-close {
+      animation: modalClose 0.5s ease forwards;
+    }
+    @keyframes modalOpen {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes modalClose {
+      from { opacity: 1; transform: scale(1); }
+      to { opacity: 0; transform: scale(0.9); }
+    }
+  
+  </style>
+  
+</head>
+
+<body class="bg-[#2B3A2F] text-white">
+
+<!-- Navbar -->
+<nav class="flex items-center justify-between p-6">
+  <div class="text-3xl font-bold hero-title">Shankari A</div>
+  <div class="space-x-6">
+    <a href="#about" class="hover:text-[#E76F51]">About</a>
+    <a href="#projects" class="hover:text-[#E76F51]">Projects</a>
+    <a href="#contact" class="hover:text-[#E76F51]">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="h-[90vh] flex flex-col justify-center items-start px-10 relative overflow-hidden">
+  <h1 class="text-6xl md:text-8xl hero-title leading-tight">Aspiring<br> Developer & Analyst</h1>
+  <p class="mt-6 text-xl max-w-lg">Dedicated to crafting efficient software solutions and embracing emerging technologies.</p>
+  <div class="absolute -top-20 -right-20 w-96 h-96 bg-[#E76F51] opacity-30 rounded-full mix-blend-overlay"></div>
+</section>
+
+<!-- About Section -->
+<section id="about" data-animate="true" class="vintage-bg text-[#2B3A2F] py-20 px-10 md:px-20">
+  <div class="grid md:grid-cols-2 gap-16">
+    <div>
+      <h2 class="text-5xl mb-6 hero-title">About Me</h2>
+      <p class="text-lg leading-relaxed mb-6">
+        Computer Science Engineering student with a strong foundation in software development and data analytics. 
+        Passionate about contributing to innovative projects and gaining hands-on experience.
+      </p>
+      <p class="text-lg leading-relaxed">
+        Studying at Prince Shri Venkateshwara Padmavathy Engineering College and pursuing additional specialization from IIT Madras.
+      </p>
+    </div>
+    <div class="flex flex-col space-y-4">
+      <div class="retro-border p-6">
+        <strong>Technical Skills:</strong> Python, Java, C++, HTML, SQL, Figma, Software Testing
+      </div>
+      <div class="retro-border p-6">
+        <strong>Soft Skills:</strong> Communication, Critical Thinking, Problem Solving, Teamwork
+      </div>
+      <div class="retro-border p-6">
+        <strong>Languages:</strong> Tamil, English, Hindi, Malayalam, Korean
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" data-animate="true" class="py-20 px-10 md:px-20">
+  <h2 class="text-5xl mb-16 hero-title">Selected Projects</h2>
+  <div class="grid md:grid-cols-2 gap-12">
+    <div class="retro-border p-8 hover:bg-[#E76F51] hover:text-[#2B3A2F] transition duration-500">
+      <h3 class="text-3xl mb-4">Household Services App (v1)</h3>
+      <p>Built a web platform for booking household services with real-time request management dashboards. 
+         <br><span class="text-sm">Tech: Python, HTML, Bootstrap, SQLite</span></p>
+    </div>
+    <div class="retro-border p-8 hover:bg-[#E76F51] hover:text-[#2B3A2F] transition duration-500">
+      <h3 class="text-3xl mb-4">AWS RetailGenius Platform</h3>
+      <p>Scalable, cloud-based e-commerce platform on AWS for handling high transaction volumes.
+         <br><span class="text-sm">Tech: EC2, RDS, S3, ELB, Route 53</span></p>
+    </div>
+    <div class="retro-border p-8 hover:bg-[#E76F51] hover:text-[#2B3A2F] transition duration-500">
+      <h3 class="text-3xl mb-4">Household Services App (v2)</h3>
+      <p>Multi-user platform for home servicing with Vue.js front-end and Flask backend.
+         <br><span class="text-sm">Tech: Vue.js, Flask, SQLAlchemy, Bootstrap, Redis, JWT</span></p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section data-animate="true" class="vintage-bg text-[#2B3A2F] py-20 px-10 md:px-20">
+  <h2 class="text-5xl mb-10 hero-title">Certifications & Workshops</h2>
+  <div class="space-y-6">
+    <div class="retro-border p-6">NPTEL Certifications: Design Thinking, Introduction to Research, Design, Technology and Innovation</div>
+    <div class="retro-border p-6">UI/UX Design Internship: 13 days training at ThisUx Pvt Ltd</div>
+    <div class="retro-border p-6">Workshop project analyzing cricket statistics using PostgreSQL databases for data insights.</div>
+    <div class="retro-border p-6">Workshops: Reverse Engineering (Vaayusastra Aerospace), AR/VR 75hrs, Game Development 90hrs</div>
+  </div>
+</section>
+
+<!-- Extracurricular Section -->
+<section data-animate="true" class="py-20 px-10 md:px-20">
+  <h2 class="text-5xl mb-10 hero-title">Extracurricular Activities</h2>
+  <div class="space-y-6">
+    <div class="retro-border p-6">National Level Cycle Polo Player</div>
+    <div class="retro-border p-6">POC at the Cultural Department of Paradox {IIT Madras}</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section data-animate="true" id="contact" class="vintage-bg text-[#2B3A2F] py-20 px-10 md:px-20">
+  <h2 class="text-5xl mb-10 hero-title">Get in Touch</h2>
+  <form class="flex flex-col space-y-6 max-w-xl">
+    <input type="text" placeholder="Name" class="p-4 retro-border">
+    <input type="email" placeholder="Email" class="p-4 retro-border">
+    <textarea rows="5" placeholder="Your Message" class="p-4 retro-border"></textarea>
+    <button type="submit" class="bg-[#E76F51] text-white p-4 rounded-full hover:bg-[#2B3A2F] hover:text-[#E76F51] transition">Send Message</button>
+  </form>
+  <div class="mt-10 text-sm">
+    <p>Email: ashankari2004@gmail.com | Phone: 6380763557</p>
+    <p>Location: Chennai, India</p>
+    <div class="flex space-x-4 mt-4">
+      <a href="https://github.com/shank2204" class="hover:text-[#E76F51]" target="_blank">GitHub</a>
+      <a href="https://www.hackerrank.com/profile/ashankari2004" class="hover:text-[#E76F51]" target="_blank">HackerRank</a>
+      <a href="https://leetcode.com/u/xqEjP39jfI/" class="hover:text-[#E76F51]" target="_blank">LeetCode</a>
+      <a href="https://www.linkedin.com/in/shankari-a-555a65272/" class="hover:text-[#E76F51]" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- See My Work Button -->
+<a onclick="openModal()" class="fixed bottom-6 right-6 flex flex-col items-center group cursor-pointer">
+  
+    <!-- Dotted Arrow Animation -->
+    <div class="mb-2 animate-bounce">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#E76F51]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-dasharray="4 2">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  
+    <span class="text-sm text-white mb-2 opacity-70 group-hover:opacity-100 transition">See My Work</span>
+  
+    <div class="relative">
+      <!-- Stronger Glowing Background -->
+      <div class="absolute inset-0 rounded-full bg-[#E76F51] opacity-70 blur-3xl animate-pulse-slow"></div>
+      <div class="absolute inset-0 rounded-full bg-[#E76F51] opacity-40 blur-2xl animate-pulse-slow"></div>
+  
+      <!-- Icon Button -->
+      <div class="relative bg-[#E76F51] p-4 rounded-full shadow-2xl hover:bg-[#2B3A2F] hover:text-[#E76F51] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 11h4a2 2 0 012 2v6a2 2 0 01-2 2h-4m-4 0H6a2 2 0 01-2-2v-6a2 2 0 012-2h4m0-4V5a2 2 0 112 0v2m0 0h-2a2 2 0 00-2 2v2h6V9a2 2 0 00-2-2h-2z" />
+        </svg>
+      </div>
+    </div>
+  
+  </a>
+  
+  
+
+<!-- Modal -->
+<div id="workModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 hidden" onclick="closeModal()">
+    <div id="modalContent" class="bg-white text-[#2B3A2F] rounded-3xl overflow-hidden w-full max-w-4xl relative scale-90" onclick="event.stopPropagation()">
+        
+
+  
+      <div class="relative overflow-hidden">
+        <div id="carousel" class="flex transition-transform duration-700 ease-out">
+          <div class="min-w-full p-10 text-center">
+            <h2 class="text-3xl font-bold mb-4">Game Development</h2>
+            <img src="Screenshot 2025-04-28 200627.png" alt="Project 1" class="mx-auto rounded-lg mb-4">
+          </div>
+          <div class="min-w-full p-10 text-center">
+            <h2 class="text-3xl font-bold mb-4">Designing</h2>
+            <video src="skill.mp4" controls class="mx-auto rounded-lg mb-4"></video>
+          </div>
+          <div class="min-w-full p-10 text-center">
+            <h2 class="text-3xl font-bold mb-4">AR/VR</h2>
+            <img src="1.jpg" alt="Project 3" class="mx-auto rounded-lg mb-4">
+          </div>
+        </div>
+        <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
+          <button onclick="prevSlide()" class="bg-[#E76F51] hover:bg-[#2B3A2F] p-2 rounded-full text-white transition">&larr;</button>
+        </div>
+        <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
+          <button onclick="nextSlide()" class="bg-[#E76F51] hover:bg-[#2B3A2F] p-2 rounded-full text-white transition">&rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let currentSlide = 0;
+    
+    function openModal() {
+        const modal = document.getElementById('workModal');
+        const content = document.getElementById('modalContent');
+        modal.classList.remove('hidden');
+        modal.style.pointerEvents = ""; // allow clicks
+        content.classList.remove('modal-close');
+        content.classList.add('modal-open');
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById('workModal');
+        const content = document.getElementById('modalContent');
+        
+        content.classList.remove('modal-open');
+        content.classList.add('modal-close');
+        
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            content.classList.remove('modal-close');
+        }, 500); // match animation duration
+    }
+    
+    function showSlide(index) {
+      const carousel = document.getElementById('carousel');
+      const totalSlides = carousel.children.length;
+      if (index >= totalSlides) currentSlide = 0;
+      else if (index < 0) currentSlide = totalSlides - 1;
+      else currentSlide = index;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+  
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  
+    // Scroll animations
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section[data-animate]').forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add('opacity-100', 'translate-y-0');
+          sec.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    });
+  
+    window.onload = () => {
+      document.querySelectorAll('section[data-animate]').forEach(sec => {
+        sec.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-700');
+      });
+    };
+</script>
+
+    
+
+</body>
+</html>
